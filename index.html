@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revival Builders | General Construction | Philadelphia, PA</title>
-    <meta name="description" content="Revival Builders - Expert interior home remodeling specialists in Philadelphia. Kitchen renovations, bathroom remodels, and interior construction. Quality craftsmanship guaranteed.">
+    <title>Revival Builders | General Construction | Warminster, PA</title>
+    <meta name="description" content="Revival Builders - Expert interior home remodeling specialists in Warminster, PA. Kitchen renovations, bathroom remodels, flooring, and interior construction. Quality craftsmanship guaranteed.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -411,6 +411,33 @@
             gap: 30px;
         }
 
+        .services-grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .services-grid-4 .service-card {
+            background: var(--white);
+        }
+
+        .services-grid-4 .service-image {
+            height: 200px;
+        }
+
+        .services-grid-4 .service-content {
+            padding: 25px;
+        }
+
+        .services-grid-4 .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .services-grid-4 .service-content p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
         .service-card {
             background: var(--white);
             position: relative;
@@ -679,6 +706,22 @@
             color: var(--white);
             font-size: 1.8rem;
             letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .project-card:first-child .project-description {
+            display: block;
+        }
+
+        .project-card:hover .project-description {
+            display: block;
         }
 
         .project-card:first-child .project-title {
@@ -1020,7 +1063,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 15px 20px;
             background: rgba(255, 255, 255, 0.05);
@@ -1031,8 +1075,23 @@
             transition: all 0.3s ease;
         }
 
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+        }
+
+        .form-group select option {
+            background: var(--navy);
+            color: var(--white);
+        }
+
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--copper);
             background: rgba(255, 255, 255, 0.08);
@@ -1044,7 +1103,7 @@
         }
 
         .form-group textarea {
-            height: 150px;
+            height: 120px;
             resize: vertical;
         }
 
@@ -1057,6 +1116,30 @@
         .contact-form .btn-primary {
             width: 100%;
             justify-content: center;
+        }
+
+        .google-review-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--navy);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
+        }
+
+        .google-review-btn:hover {
+            background: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .google-review-btn svg {
+            fill: #4285f4;
         }
 
         /* Footer */
@@ -1159,7 +1242,8 @@
                 justify-content: flex-start;
             }
 
-            .services-grid {
+            .services-grid,
+            .services-grid-4 {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -1228,7 +1312,8 @@
                 padding: 0 20px;
             }
 
-            .services-grid {
+            .services-grid,
+            .services-grid-4 {
                 grid-template-columns: 1fr;
             }
 
@@ -1420,20 +1505,6 @@
                 </a>
                 <a href="#projects" class="btn-secondary">View Our Work</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">8+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Client Satisfaction</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1444,16 +1515,15 @@
                 <div class="section-label">What We Do</div>
                 <h2 class="section-title">Our Services</h2>
             </div>
-            <div class="services-grid">
+            <div class="services-grid services-grid-4">
                 <div class="service-card">
                     <div class="service-image">
                         <img src="images/kitchen-2.jpg" alt="Kitchen Remodeling">
-                        <div class="service-number">01</div>
                     </div>
                     <div class="service-content">
                         <h3>Kitchen Remodeling</h3>
-                        <p>Transform your kitchen into a stunning, functional space. From custom cabinetry to elegant countertops, we create kitchens that inspire culinary creativity.</p>
-                        <a href="#contact" class="service-link">
+                        <p>Custom cabinetry, countertops, backsplashes, and complete kitchen transformations.</p>
+                        <a href="kitchen-remodeling.html" class="service-link">
                             Learn More
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1464,12 +1534,11 @@
                 <div class="service-card">
                     <div class="service-image">
                         <img src="images/bathroom-gold.jpg" alt="Bathroom Renovation">
-                        <div class="service-number">02</div>
                     </div>
                     <div class="service-content">
                         <h3>Bathroom Renovation</h3>
-                        <p>Create your personal sanctuary with luxurious bathroom upgrades. Modern fixtures, elegant tilework, and smart storage solutions tailored to your style.</p>
-                        <a href="#contact" class="service-link">
+                        <p>Curbless showers, custom vanities, tilework, and luxury bathroom upgrades.</p>
+                        <a href="bathroom-renovation.html" class="service-link">
                             Learn More
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1480,12 +1549,26 @@
                 <div class="service-card">
                     <div class="service-image">
                         <img src="images/living-room.jpg" alt="Interior Construction">
-                        <div class="service-number">03</div>
                     </div>
                     <div class="service-content">
                         <h3>Interior Construction</h3>
-                        <p>Reimagine your living spaces with expert interior construction. Open floor plans, custom built-ins, and structural modifications that enhance your lifestyle.</p>
-                        <a href="#contact" class="service-link">
+                        <p>Custom built-ins, trim work, wainscoting, and structural modifications.</p>
+                        <a href="interior-construction.html" class="service-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/kitchen-3.jpg" alt="Flooring Installation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Flooring</h3>
+                        <p>Hardwood, LVP, tile, and laminate installation with expert preparation.</p>
+                        <a href="flooring.html" class="service-link">
                             Learn More
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -1512,8 +1595,8 @@
                 <div class="about-content">
                     <div class="section-label">About Us</div>
                     <h2 class="section-title">Craftsmanship You Can Trust</h2>
-                    <p class="about-text">At Revival Builders, we believe every home has the potential for transformation. Founded on principles of quality, integrity, and dedication, we've been helping Philadelphia homeowners bring their visions to life since 2018.</p>
-                    <p class="about-text">Our team of skilled craftsmen combines traditional techniques with modern innovation to deliver results that exceed expectations. We treat every project as if it were our own home, ensuring attention to detail at every step.</p>
+                    <p class="about-text">Revival Builders is a full-service general contracting company based in Warminster, PA, specializing in interior home remodeling. Since 2018, we've been transforming homes throughout Bucks County, Montgomery County, and the Greater Philadelphia region with quality craftsmanship and attention to detail.</p>
+                    <p class="about-text">From kitchen renovations and bathroom remodels to custom flooring and curbless shower installations, our experienced team handles every aspect of your project. We pride ourselves on clear communication, transparent pricing, and delivering results that exceed expectations—on time and within budget.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1566,36 +1649,41 @@
                 <div class="project-card">
                     <img src="images/kitchen-1.jpg" alt="White Cabinet Kitchen with Island">
                     <div class="project-overlay">
-                        <div class="project-category">Kitchen</div>
-                        <h3 class="project-title">White Cabinet Kitchen with Island</h3>
+                        <div class="project-category">Kitchen Remodel</div>
+                        <h3 class="project-title">Modern Kitchen with Island</h3>
+                        <p class="project-description">Complete kitchen renovation featuring white shaker cabinets, quartz countertops, farmhouse sink, and a large center island with seating.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/shower-black-tile.jpg" alt="Modern Black Tile Shower">
+                    <img src="images/shower-black-tile.jpg" alt="Curbless Shower with Black Tile">
                     <div class="project-overlay">
-                        <div class="project-category">Bathroom</div>
-                        <h3 class="project-title">Modern Black Tile Shower</h3>
+                        <div class="project-category">Curbless Shower</div>
+                        <h3 class="project-title">Black Tile Curbless Shower</h3>
+                        <p class="project-description">Custom curbless shower with herringbone black tile, built-in niche with lighting, glass enclosure, and built-in bench seat.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/bathroom-5.jpg" alt="Custom Vanity with Tile Accent">
+                    <img src="images/bathroom-5.jpg" alt="Custom Vanity with Tile Accent Wall">
                     <div class="project-overlay">
-                        <div class="project-category">Bathroom</div>
-                        <h3 class="project-title">Custom Vanity with Tile Accent</h3>
+                        <div class="project-category">Bathroom Remodel</div>
+                        <h3 class="project-title">Custom Vanity & Tile Accent</h3>
+                        <p class="project-description">Natural wood vanity with quartz top, decorative hexagon tile accent wall, arched mirror, and modern black fixtures.</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="images/living-dining.jpg" alt="Open Concept Living & Dining">
                     <div class="project-overlay">
-                        <div class="project-category">Interior</div>
-                        <h3 class="project-title">Open Concept Living & Dining</h3>
+                        <div class="project-category">Interior Construction</div>
+                        <h3 class="project-title">Open Concept Living Space</h3>
+                        <p class="project-description">Full interior remodel with custom built-in entertainment center, lighted shelving, hardwood flooring, and open floor plan design.</p>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="images/bathroom-2.jpg" alt="Luxury Bath with Gold Fixtures">
                     <div class="project-overlay">
-                        <div class="project-category">Bathroom</div>
-                        <h3 class="project-title">Luxury Bath with Gold Fixtures</h3>
+                        <div class="project-category">Bathroom Remodel</div>
+                        <h3 class="project-title">Luxury Bathroom Suite</h3>
+                        <p class="project-description">Elegant bathroom featuring walnut vanity, marble countertop, brass fixtures, arched gold mirror, and wall-to-wall tile installation.</p>
                     </div>
                 </div>
             </div>
@@ -1641,10 +1729,7 @@
                 <div class="rating-badges">
                     <div class="rating-badge">
                         <div class="stars">★★★★★</div>
-                        <span>5.0 Rating on Houzz</span>
-                    </div>
-                    <div class="rating-badge award">
-                        <span>🏆 Best of Houzz 2023 & 2024</span>
+                        <span>5.0 on Google Reviews</span>
                     </div>
                 </div>
             </div>
@@ -1655,7 +1740,7 @@
                     <div class="testimonial-footer">
                         <div class="testimonial-info">
                             <h4>Kitchen Renovation Client</h4>
-                            <p>via Thumbtack • Top Pro</p>
+                            <p>via Google Reviews</p>
                         </div>
                     </div>
                 </div>
@@ -1665,7 +1750,7 @@
                     <div class="testimonial-footer">
                         <div class="testimonial-info">
                             <h4>Home Office Cabinet Client</h4>
-                            <p>via Thumbtack • Top Pro</p>
+                            <p>via Google Reviews</p>
                         </div>
                     </div>
                 </div>
@@ -1675,17 +1760,21 @@
                     <div class="testimonial-footer">
                         <div class="testimonial-info">
                             <h4>Dining Room Wainscoting Client</h4>
-                            <p>via Thumbtack • Top Pro</p>
+                            <p>via Google Reviews</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="review-platforms">
-                <p>Highly rated on</p>
-                <div class="platform-logos">
-                    <span class="platform">Houzz</span>
-                    <span class="platform">Thumbtack</span>
-                </div>
+                <a href="https://www.google.com/search?q=Revival+Builders+Reviews" target="_blank" class="google-review-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    Leave Us a Google Review
+                </a>
             </div>
         </div>
     </section>
@@ -1697,10 +1786,10 @@
             <div class="cta-content">
                 <h2>Ready to Transform Your Home?</h2>
                 <p>Let's discuss your project and bring your vision to life.</p>
-                <a href="tel:2676009986" class="btn-primary">
-                    Call (267) 600-9986
+                <a href="sms:2676009986" class="btn-primary">
+                    Text Us (267) 600-9986
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                     </svg>
                 </a>
             </div>
@@ -1719,12 +1808,12 @@
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                                 </svg>
                             </div>
                             <div class="contact-item-content">
-                                <h4>Phone</h4>
-                                <a href="tel:2676009986">(267) 600-9986</a>
+                                <h4>Call or Text</h4>
+                                <a href="sms:2676009986">(267) 600-9986</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1748,25 +1837,13 @@
                             </div>
                             <div class="contact-item-content">
                                 <h4>Location</h4>
-                                <p>Philadelphia, PA 19111</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 6v6l4 2"/>
-                                </svg>
-                            </div>
-                            <div class="contact-item-content">
-                                <h4>Business Hours</h4>
-                                <p>Mon - Fri: 9am - 5pm</p>
+                                <p>Warminster, PA 18974</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form action="https://formspree.io/f/xojdwdlr" method="POST" id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -1774,7 +1851,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(215) 555-0123">
+                                <input type="tel" id="phone" name="phone" placeholder="(215) 555-0123" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1782,8 +1859,33 @@
                             <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
+                            <label for="address">Project Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main St, City, PA 12345">
+                        </div>
+                        <div class="form-group">
                             <label for="project">Project Type</label>
-                            <input type="text" id="project" name="project" placeholder="Kitchen Remodel, Bathroom Renovation, etc.">
+                            <select id="project" name="project" required>
+                                <option value="" disabled selected>Select a project type</option>
+                                <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+                                <option value="Bathroom Renovation">Bathroom Renovation</option>
+                                <option value="Curbless Shower">Curbless Shower</option>
+                                <option value="Flooring">Flooring</option>
+                                <option value="Interior Construction">Interior Construction</option>
+                                <option value="Design Consultation">Design Consultation</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hearAbout">How Did You Hear About Us?</label>
+                            <select id="hearAbout" name="hearAbout" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Google">Google</option>
+                                <option value="Thumbtack">Thumbtack</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Website">Website</option>
+                                <option value="Word of Mouth">Word of Mouth</option>
+                                <option value="Other">Other</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -1831,10 +1933,15 @@
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                         </svg>
                     </a>
+                    <a href="https://wa.me/12676009986" aria-label="WhatsApp" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Revival Builders Inc. All rights reserved. | Philadelphia, PA</p>
+                <p>&copy; 2026 Revival Builders Inc. All rights reserved. | Warminster, PA 18974</p>
             </div>
         </div>
     </footer>
@@ -1868,20 +1975,6 @@
                     });
                 }
             });
-        });
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Here you would typically send this to a server
-            // For now, we'll show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
         });
 
         // Intersection Observer for animations
